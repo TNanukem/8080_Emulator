@@ -3,7 +3,7 @@
 void CPU::initialize(){
     
     // Set all flags to false
-    S = Z = P = C = AC = false;
+    S = Z = P = Ca = AC = false;
 
     // Clears the memory
     for(int i = 0; i < 65536; i++){
@@ -17,3 +17,11 @@ void CPU::initialize(){
     A = B = C = D = E = H = L = 0x0;
     
 };
+
+void CPU::runClock(){
+    code = memory[pc];
+
+    byte_number = disassembler.run_clock(code);
+
+    pc += byte_number;
+}

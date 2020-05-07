@@ -7,5 +7,5 @@ using namespace std;
 class Disassembler{
     public:
 
-    void run();
+    void run(code);
 };

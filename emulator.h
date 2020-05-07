@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
+#include <fstream>
 
 #include "cpu.h"
 #include "disassembler.h"
@@ -12,7 +13,7 @@ class Emulator{
     public:
 
     void run();
-    bool loadGame(string gameFile);
+    bool loadGame(string romAdd);
 
     CPU cpu;
 

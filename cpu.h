@@ -11,10 +11,12 @@ class CPU{
     uint16_t sp, pc;
 
     // Flag bits -> Used boolean instead of 1-bit data type.
-    bool S, Z, P, C, AC;
+    bool S, Z, P, Ca, AC;
 
     // 64KB of memory
     uint8_t memory[65536]; 
+
+    Disassembler disassembler;
 
     void initialize();
 
