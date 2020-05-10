@@ -1,2 +1,2 @@
-8080: main.cpp emulator.cpp disassembler.cpp
-	g++ main.cpp emulator.cpp disassembler.cpp -o 8080
+8080: main.cpp emulator.cpp cpu.cpp
+	g++ main.cpp emulator.cpp cpu.cpp -o 8080

@@ -4,7 +4,6 @@
 #include <fstream>
 
 #include "cpu.h"
-#include "disassembler.h"
 
 using namespace std;
 
@@ -13,7 +12,7 @@ class Emulator{
     public:
 
     void run();
-    bool loadGame(string romAdd);
+    bool loadGame(char *romAdd, CPU *cpu);
 
     CPU cpu;
 

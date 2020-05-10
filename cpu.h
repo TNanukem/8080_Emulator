@@ -1,5 +1,7 @@
 #include <stdint.h>
-
+#include <stdlib.h>
+#include <iostream>
+using namespace std;
 class CPU{
 
     public:
@@ -11,13 +13,13 @@ class CPU{
     uint16_t sp, pc;
 
     // Flag bits -> Used boolean instead of 1-bit data type.
-    bool S, Z, P, Ca, AC;
+    bool S, Z, P, Ca, AC, CY;
 
     // 64KB of memory
     uint8_t memory[65536]; 
 
-    Disassembler disassembler;
-
     void initialize();
+    int disassemble(uint8_t code);
+    void runClock();
 
 };
