@@ -8,7 +8,7 @@ void CPU::initialize(){
 
     // Clears the memory
     for(int i = 0; i < 65536; i++){
-        memory[i] = 55;
+        memory[i] = -1;
     }
 
     // Setting stack pointer and program counter to zero
